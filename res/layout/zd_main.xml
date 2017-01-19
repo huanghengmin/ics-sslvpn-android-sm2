@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingTop="10.0dip">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/service"
+            android:drawablePadding="10.0dip"
+            android:gravity="center_vertical"
+            android:text="启动"
+            android:textSize="14.0dip" />
+
+        <Button
+            android:id="@+id/setting"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/start"
+            android:drawableLeft="@drawable/setting"
+            android:drawablePadding="10.0dip"
+            android:gravity="center_vertical"
+            android:text="设置"
+            android:textSize="14.0dip" />
+
+        <!-- <Button
+             android:id="@+id/setting_advanced"
+             android:layout_below="@id/setting"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/advance_setting"
+             android:drawablePadding="10.0dip"
+             android:gravity="center_vertical"
+             android:text="高级设置"
+             android:textSize="14.0dip" />-->
+
+        <!-- <Button
+             android:id="@+id/config"
+             android:layout_below="@id/setting_advanced"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/set"
+             android:drawablePadding="10.0dip"
+             android:gravity="center_vertical"
+             android:text="连接设置"
+             android:textSize="14.0dip" />-->
+
+        <Button
+            android:id="@+id/cert"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/setting"
+            android:drawableLeft="@drawable/cert"
+            android:drawablePadding="10.0dip"
+            android:gravity="center_vertical"
+            android:text="证书"
+            android:textSize="14.0dip" />
+
+        <Button
+            android:id="@+id/about"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cert"
+            android:drawableLeft="@drawable/about"
+            android:drawablePadding="10.0dip"
+            android:gravity="center_vertical"
+            android:text="关于"
+            android:textSize="14.0dip" />
+
+        <Button
+            android:id="@+id/exit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/about"
+            android:drawableLeft="@drawable/exit"
+            android:drawablePadding="10.0dip"
+            android:gravity="center_vertical"
+            android:text="退出"
+            android:textSize="14.0dip" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingTop="10.0dip">
+
+    <RelativeLayout
+        android:id="@+id/login_div"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dip"
+        android:layout_margin="15dip" >
+        <!-- 服务地址 -->
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/address"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_address"
+            android:singleLine="true"
+            android:inputType="text"/>
+
+        <!-- 服务协议 -->
+        <TextView
+            android:id="@+id/tv_tcpudp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address"
+            android:layout_marginTop="3dp"
+            android:text="@string/tcpudp"/>
+
+        <ToggleButton
+            android:id="@+id/tcpudp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_tcpudp"
+            android:layout_alignRight="@id/tv_tcpudp"
+            android:textOff="TCP"
+            android:textOn="UDP" />
+
+        <!-- 服务端口 -->
+        <TextView
+            android:id="@+id/tv_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tcpudp"
+            android:layout_marginTop="3dp"
+            android:text="@string/port"/>
+
+        <EditText
+            android:id="@+id/port"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_port"
+            android:singleLine="true"
+            android:inputType="text" />
+
+        <!-- 策略端口 -->
+        <TextView
+            android:id="@+id/tv_poli_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/port"
+            android:layout_marginTop="3dp"
+            android:text="@string/poli_port"/>
+
+        <EditText
+            android:id="@+id/poli_port"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_poli_port"
+            android:singleLine="true"
+            android:inputType="text" />
+
+        <!-- 证书口令 -->
+        <TextView
+            android:id="@+id/tv_ping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/poli_port"
+            android:layout_marginTop="3dp"
+            android:text="@string/vpn_ping"/>
+        <EditText
+            android:id="@+id/ping"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_ping"
+            android:singleLine="true"
+            android:inputType="textPassword" />
+
+        <!-- 证书容器 -->
+        <TextView
+            android:id="@+id/tv_cert_container_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ping"
+            android:layout_marginTop="3dp"
+            android:text="@string/container_name"/>
+        <EditText
+            android:id="@+id/cert_container_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cert_container_name"
+            android:singleLine="true"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/basic_settings__submit_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cert_container_name"
+            android:layout_alignLeft="@id/cert_container_name"
+            android:text="@string/basic_settings_submit_but_text"/>
+
+        <Button
+            android:id="@+id/basic_settings__back_but"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cert_container_name"
+            android:layout_alignRight="@id/cert_container_name"
+            android:text="@string/basic_settings_back_but_text" />
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+    <TextView
+            style="@style/item"
+            android:layout_marginTop="5dp"
+            android:text="@string/address" />
+
+        <EditText
+            android:id="@+id/address"
+            style="@style/item"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:inputType="textUri"
+            android:padding="8dp"></EditText>-->
+
+       <!-- <TextView
+            style="@style/item"
+            android:layout_marginTop="5dp"
+            android:text="@string/port" />
+
+        <EditText
+            android:id="@+id/port"
+            style="@style/item"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:inputType="number"
+            android:padding="8dp" />-->
+
+<!--        <TextView
+            style="@style/item"
+            android:layout_marginTop="5dp"
+            android:text="协议类型：" />
+
+        <ToggleButton
+            android:id="@+id/tcpudp"
+            style="@style/accountSetupButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:textOff="TCP"
+            android:textOn="UDP" />-->
+
+ <!--       <TextView
+            style="@style/item"
+            android:layout_marginTop="5dp"
+            android:text="策略端口：" />
+
+        <EditText
+            android:id="@+id/poli_port"
+            style="@style/item"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:inputType="number"
+            android:padding="8dp" />-->
+
+        <!--      <CheckBox
+                  android:id="@+id/lzo"
+                  style="@style/item"
+                  android:layout_marginBottom="8dip"
+                  android:layout_marginTop="8dip"
+                  android:checked="false"
+                  android:text="@string/useLZO"
+                  android:textColor="@color/black" />-->
+
+   <!--     <TextView
+            style="@style/item"
+            android:layout_marginTop="5dp"
+            android:text="@string/vpn_ping" />
+
+        <EditText
+            android:id="@+id/ping"
+            style="@style/item"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:inputType="textPassword"
+            android:padding="8dp" />-->
+
+    <!--    <TextView
+            style="@style/item"
+            android:layout_marginTop="5dp"
+            android:text="证书容器：" />
+
+        <EditText
+            android:id="@+id/cert_container_name"
+            style="@style/item"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:padding="8dp" />-->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/relative_layout_2"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="8dip"-->
+            <!--android:layout_marginRight="8dip">-->
+
+          <!--  <Button
+                android:id="@+id/basic_settings__submit_but"
+                style="@style/item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/basic_settings_submit_but_text" />
+
+            <Button
+                android:id="@+id/basic_settings__back_but"
+                style="@style/item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/basic_settings_back_but_text" />-->
+        <!--</RelativeLayout>-->
+
+</ScrollView>

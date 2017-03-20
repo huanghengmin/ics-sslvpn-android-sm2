@@ -46,6 +46,7 @@ public class CheckStatusSignCRLValidity {
             final String ip,
             final String poli_port,
             final String mServerPort,
+            final boolean tcpudp,
             final CheckListener listener) {
 
         new Thread(new Runnable() {
@@ -150,7 +151,7 @@ public class CheckStatusSignCRLValidity {
                                         if (config_file_md5.equals(config_md5) && ca_file_md5.equals(ca_md5) && cert_file_md5.equals(crt_md5) && key_file_md5.equals(key_md5)) {
                                             if (config_file.exists() && config_file.length() > 0) {
                                                 byte[] data1 = PostRequest.readInstream(new FileInputStream(config_file));
-                                                ConfigFileUtil.update(ip, mServerPort, data1, save_path + PropertiesUtils.CONFIG_PATH);
+                                                ConfigFileUtil.update(ip, mServerPort,tcpudp, data1, save_path + PropertiesUtils.CONFIG_PATH);
                                             }
                                         } else {
                                             handler.post(new Runnable() {
@@ -211,7 +212,8 @@ public class CheckStatusSignCRLValidity {
             final Context paramContext,
             final String ip,
             final String poli_port,
-            final String mServerPort) {
+            final String mServerPort,
+            boolean tcpudp) {
 
         SharedPreferences sPreferences = paramContext.getSharedPreferences("com.zd.vpn", Context.MODE_PRIVATE);
         boolean read = sPreferences.getBoolean("vpn.read", false);
@@ -299,7 +301,7 @@ public class CheckStatusSignCRLValidity {
                                 if (config_file_md5.equals(config_md5) && ca_file_md5.equals(ca_md5) && cert_file_md5.equals(crt_md5) && key_file_md5.equals(key_md5)) {
                                     if (config_file.exists() && config_file.length() > 0) {
                                         byte[] data1 = PostRequest.readInstream(new FileInputStream(config_file));
-                                        ConfigFileUtil.update(ip, mServerPort, data1, save_path + PropertiesUtils.CONFIG_PATH);
+                                        ConfigFileUtil.update(ip, mServerPort, tcpudp,data1, save_path + PropertiesUtils.CONFIG_PATH);
                                     }
                                 } else {
                                     return new ReturnObject(false, "下载策略异常！");

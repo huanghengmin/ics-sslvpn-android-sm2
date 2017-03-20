@@ -414,7 +414,8 @@
     <string name="qs_disconnect">Disconnect %s</string>
     <string name="connectretrymaxmessage">Enter the maximum time between connection attempts. OpenVPN will slowly raise its waiting time after an unsuccessful connection attempt up to this value. Defaults to 300s.</string>
     <string name="connectretrymaxtitle">Maximum time between connection attempts</string>
-    <string name="state_waitconnectretry">Waiting %ss seconds between connection attempt</string>
+    <!--<string name="state_waitconnectretry">Waiting %ss seconds between connection attempt</string>-->
+    <string name="state_waitconnectretry">等待重新连接</string>
     <string name="nought_alwayson_warning"><![CDATA[If you did not get a VPN confirmation dialog, you have \"Always on VPN\" enabled for another app. In that case only that app is allowed to connect to a VPN. Check under Settings-> Networks more .. -> VPNS]]></string>
     <string name="info_incomplete_text">输入信息不完整</string>
     <string name="vpn_ping">PIN码</string>

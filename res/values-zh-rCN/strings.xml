@@ -348,8 +348,8 @@
   <string name="settings_more">更多设置</string>
   <string name="product_name">产品名称：安全接入网关客户端</string>
   <string name="copyright">版权所有：北京中盾安全技术开发有限公司</string>
-  <string name="version_value">版本号：V2.6.0.26020170118</string>
-  <string name="version">V2.6.0.26020170118</string>
+  <string name="version_value">版本号：V3.0.0.30020170316</string>
+  <string name="version">V3.0.0.30020170316</string>
   <string name="no_process">未运行</string>
 
   <string name="client_behaviour">客户端行为</string>

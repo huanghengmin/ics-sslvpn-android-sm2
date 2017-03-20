@@ -63,6 +63,7 @@ public class NetReceiver extends BroadcastReceiver implements VpnStatus.StateLis
                     final String ip = sPreferences.getString("vpn.ip", "");
                     final String port = sPreferences.getString("vpn.port", "");
                     final String poliPort = sPreferences.getString("vpn.poliPort", "");
+                    final boolean tcpudp = sPreferences.getBoolean("vpn.tcpUdp", false);
                     final CheckUpgrade checkUpgrade = new CheckUpgrade(context, ip, poliPort);
                     final Context ctx = context;
                     //检测版本更新
@@ -91,7 +92,7 @@ public class NetReceiver extends BroadcastReceiver implements VpnStatus.StateLis
                         public void onCheckErr(String msg) {
                             sendNotification("正在检测签名信息，请稍候...", ctx);
                             CheckStatusSignCRLValidity check = new CheckStatusSignCRLValidity(ctx);
-                            check.check(ctx, ip, poliPort, port, new CheckStatusSignCRLValidity.CheckListener() {
+                            check.check(ctx, ip, poliPort, port, tcpudp,new CheckStatusSignCRLValidity.CheckListener() {
                                 @Override
                                 public void onCheckOk(String msg) {
                                     sendNotification("正在检测客户端绑定信息，请稍候...", ctx);

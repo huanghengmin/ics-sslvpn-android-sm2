@@ -354,7 +354,8 @@ public class ExternalOpenVPNService extends Service implements VpnStatus.StateLi
                 String port = sPreferences.getString("vpn.port", "");
                 String poliPort = sPreferences.getString("vpn.poliPort", "");
                 CheckStatusSignCRLValidity check = new CheckStatusSignCRLValidity();
-                ReturnObject returnObject = check.check(getApplicationContext(), ip, poliPort, port);
+                final boolean tcpudp = sPreferences.getBoolean("vpn.tcpUdp", false);
+                ReturnObject returnObject = check.check(getApplicationContext(), ip, poliPort, port,tcpudp);
                 if (returnObject.isFlag()) {
                     String serialnumber = sPreferences.getString("vpn.serialNumber", "");
                     TelInfoUtil telInfo = new TelInfoUtil(getApplicationContext());

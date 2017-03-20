@@ -233,6 +233,7 @@ public class MoreActivity extends Activity implements OnClickListener, VpnStatus
                     final String ip = sPreferences.getString("vpn.ip", "");
                     final String port = sPreferences.getString("vpn.port", "");
                     final String poliPort = sPreferences.getString("vpn.poliPort", "");
+                    final boolean tcpudp = sPreferences.getBoolean("vpn.tcpUdp", false);
                     final CheckUpgrade checkUpgrade = new CheckUpgrade(getApplicationContext(), ip, poliPort);
                     //检测版本更新
                     checkUpgrade.check(new CheckUpgrade.OnCheckListener() {
@@ -262,7 +263,7 @@ public class MoreActivity extends Activity implements OnClickListener, VpnStatus
                         public void onCheckErr(String msg) {
                             showProgressMsg("正在检测签名信息，请稍候...");
                             CheckStatusSignCRLValidity check = new CheckStatusSignCRLValidity(getApplicationContext());
-                            check.check(getApplicationContext(), ip, poliPort, port, new CheckStatusSignCRLValidity.CheckListener() {
+                            check.check(getApplicationContext(), ip, poliPort, port,tcpudp, new CheckStatusSignCRLValidity.CheckListener() {
                                 @Override
                                 public void onCheckOk(String msg) {
                                     showProgressMsg("正在检测客户端绑定信息，请稍候...");
